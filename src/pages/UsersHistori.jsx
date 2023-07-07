@@ -25,9 +25,9 @@ const UsersHistori = () => {
             <CDBSidebarHeader prefix={<i className="fa fa-bars" />}>StandupIndo Malang </CDBSidebarHeader>
             <CDBSidebarContent>
             <CDBSidebarMenu>
-                <CDBSidebarMenuItem icon="th-large" ><CDBLink to="/users/" >Favorit</CDBLink></CDBSidebarMenuItem>
-                <CDBSidebarMenuItem icon="sticky-note"><CDBLink to="/users/video" >Video Disukai</CDBLink></CDBSidebarMenuItem>
-                <CDBSidebarMenuItem icon="sticky-note" active><CDBLink to="/users/histori" className='text-dark'>Histori</CDBLink></CDBSidebarMenuItem>
+              <CDBLink to="/users/" ><CDBSidebarMenuItem icon="th-large" >Favorit</CDBSidebarMenuItem></CDBLink>
+              <CDBLink to="/users/video" ><CDBSidebarMenuItem icon="sticky-note">Video Disukai</CDBSidebarMenuItem></CDBLink>
+              <CDBLink to="/users/histori" className='text-dark'><CDBSidebarMenuItem icon="sticky-note" active>Histori</CDBSidebarMenuItem></CDBLink>
             </CDBSidebarMenu>
             </CDBSidebarContent>
             <br/>
@@ -51,7 +51,7 @@ const UsersHistori = () => {
 
             </div>
             </CDBSidebarFooter>
-            <CDBSidebarMenuItem icon="power-off" style={{color:'red'}}><CDBLink to="/">Logout</CDBLink></CDBSidebarMenuItem>
+            <CDBLink to="/"><CDBSidebarMenuItem icon="power-off" style={{color:'red'}}>Logout</CDBSidebarMenuItem></CDBLink>
         </CDBSidebar>
 
             </div>

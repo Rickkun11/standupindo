@@ -25,9 +25,9 @@ const UsersHomepage = () => {
             <CDBSidebarHeader prefix={<i className="fa fa-bars" />}>StandupIndo Malang </CDBSidebarHeader>
             <CDBSidebarContent>
             <CDBSidebarMenu>
-                <CDBSidebarMenuItem icon="th-large" active><CDBLink to="/users/" className='text-dark'>Favorit</CDBLink></CDBSidebarMenuItem>
-                <CDBSidebarMenuItem icon="sticky-note"><CDBLink to="/users/video" >Video Disukai</CDBLink></CDBSidebarMenuItem>
-                <CDBSidebarMenuItem icon="sticky-note"><CDBLink to="/users/histori">Histori</CDBLink></CDBSidebarMenuItem>
+                <CDBLink to="/users/" className='text-dark'><CDBSidebarMenuItem icon="th-large" active>Favorit</CDBSidebarMenuItem></CDBLink>
+                <CDBLink to="/users/video" ><CDBSidebarMenuItem icon="sticky-note">Video Disukai</CDBSidebarMenuItem></CDBLink>
+                <CDBLink to="/users/histori"><CDBSidebarMenuItem icon="sticky-note">Histori</CDBSidebarMenuItem></CDBLink>
 
             </CDBSidebarMenu>
             </CDBSidebarContent>
@@ -53,7 +53,7 @@ const UsersHomepage = () => {
 
             </div>
             </CDBSidebarFooter>
-            <CDBSidebarMenuItem icon="power-off" style={{color:'red'}}><CDBLink to="/">Logout</CDBLink></CDBSidebarMenuItem>
+            <CDBLink to="/"><CDBSidebarMenuItem icon="power-off" style={{color:'red'}}>Logout</CDBSidebarMenuItem></CDBLink>
         </CDBSidebar>
 
             </div>

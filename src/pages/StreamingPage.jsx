@@ -10,9 +10,9 @@ import {
 } from 'cdbreact';
 import FooterComp from '../components/FooterComp';
 import { CDBNavbar, CDBInput } from "cdbreact";
-import CardContents from '../components/CardContents';
+import StreamingCard from '../components/StreamingCard';
 
-const UsersVideo = () => {
+const UserStreamingPage = () => {
   return (
     <>
 
@@ -25,9 +25,10 @@ const UsersVideo = () => {
             <CDBSidebarHeader prefix={<i className="fa fa-bars" />}>StandupIndo Malang </CDBSidebarHeader>
             <CDBSidebarContent>
             <CDBSidebarMenu>
-              <CDBLink to="/users/" ><CDBSidebarMenuItem icon="th-large" >Favorit</CDBSidebarMenuItem></CDBLink>
-              <CDBLink to="/users/video" className='text-dark'><CDBSidebarMenuItem icon="sticky-note" active>Video Disukai</CDBSidebarMenuItem></CDBLink>
-              <CDBLink to="/users/histori"><CDBSidebarMenuItem icon="sticky-note">Histori</CDBSidebarMenuItem></CDBLink>
+                <CDBLink to="/users/" className='text-dark'><CDBSidebarMenuItem icon="th-large" active>Favorit</CDBSidebarMenuItem></CDBLink>
+                <CDBLink to="/users/video" ><CDBSidebarMenuItem icon="sticky-note">Video Disukai</CDBSidebarMenuItem></CDBLink>
+                <CDBLink to="/users/histori"><CDBSidebarMenuItem icon="sticky-note">Histori</CDBSidebarMenuItem></CDBLink>
+
             </CDBSidebarMenu>
             </CDBSidebarContent>
             <br/>
@@ -43,6 +44,7 @@ const UsersVideo = () => {
             <br/>
             <br/>
             <br/>
+
             <CDBSidebarFooter style={{ textAlign: 'center' }}>
             <div
                 className="sidebar-btn-wrapper"
@@ -67,8 +69,8 @@ const UsersVideo = () => {
                   </CDBNavbar>
                   <div className="info">
             <div>
-                Video
-                <CardContents/>
+                Stream:id
+                <StreamingCard/>
             </div>
         </div>
 
@@ -83,4 +85,4 @@ const UsersVideo = () => {
   );
 };
 
-export default UsersVideo;
+export default UserStreamingPage;
