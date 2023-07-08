@@ -25,7 +25,7 @@ const UserStreamingPage = () => {
             <CDBSidebarHeader prefix={<i className="fa fa-bars" />}>StandupIndo Malang </CDBSidebarHeader>
             <CDBSidebarContent>
             <CDBSidebarMenu>
-                <CDBLink to="/users/" className='text-dark'><CDBSidebarMenuItem icon="th-large" active>Favorit</CDBSidebarMenuItem></CDBLink>
+                <CDBLink to="/users/"><CDBSidebarMenuItem icon="th-large">Favorit</CDBSidebarMenuItem></CDBLink>
                 <CDBLink to="/users/video" ><CDBSidebarMenuItem icon="sticky-note">Video Disukai</CDBSidebarMenuItem></CDBLink>
                 <CDBLink to="/users/histori"><CDBSidebarMenuItem icon="sticky-note">Histori</CDBSidebarMenuItem></CDBLink>
 

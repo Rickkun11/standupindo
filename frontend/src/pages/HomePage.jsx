@@ -1,5 +1,5 @@
 
-import NavbarComp from '../components/Navigation'
+import Header from '../components/Header';
 import TabsComp from '../components/Tabs'
 import FooterComp from '../components/FooterComp';
 
@@ -8,7 +8,7 @@ function HomePage() {
   return (
 
     <div className="Homepage">
-        <NavbarComp />
+        <Header />
             <br/>
         <TabsComp />
             <br/>
