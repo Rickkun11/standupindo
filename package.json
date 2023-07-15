@@ -1,28 +1,35 @@
 {
-  "name": "standupindo",
+  "name": "Ecommerce-app-2023",
   "version": "1.0.0",
-  "type": "module",
-  "description": "MERN authentication system",
+  "description": "ecommerce rest api",
   "main": "server.js",
+  "type": "module",
   "scripts": {
-    "start": "node backend/server.js",
-    "server": "nodemon backend/server.js",
-    "client": "npm run dev --prefix frontend",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix ./client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "author": "Brad Traversy",
+  "keywords": [],
+  "author": "Techinfoyt",
   "license": "MIT",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "cookie-parser": "^1.4.6",
+    "bcrypt": "^5.1.0",
+    "colors": "^1.4.0",
+    "concurrently": "^7.6.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "express-async-handler": "^1.2.0",
+    "express-formidable": "^1.2.0",
+    "install": "^0.13.0",
     "jsonwebtoken": "^9.0.0",
-    "mongoose": "^7.1.0"
-  },
-  "devDependencies": {
-    "concurrently": "^8.0.1",
-    "nodemon": "^2.0.22"
+    "mongoose": "^6.8.4",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20",
+    "npm": "^9.8.0",
+    "react-bootstrap": "^2.8.0",
+    "react-icons": "^4.7.1",
+    "react-player": "^2.12.0",
+    "slugify": "^1.6.5"
   }
 }
