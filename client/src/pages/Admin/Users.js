@@ -48,7 +48,7 @@ const Users = () => {
 
                   <div className="card-body w-50">
                     <h5 className="card-title">{p.name}</h5>
-                    <p className="card-text">Tanggal Upload : {Date.parse(p.createdAt)}</p>
+                    <p className="card-text">Tanggal Upload : {p.createdAt}</p>
                   </div>
 
                   <div className="card-body">

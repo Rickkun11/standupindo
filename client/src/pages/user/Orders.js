@@ -1,9 +1,8 @@
-import React, { useState,useEffect } from "react";
+import React, {useEffect } from "react";
 
 import Layout from "../../components/Layout/Layout";
 import { useCart } from "../../context/cart";
 import { useAuth } from "../../context/auth";
-import toast from "react-hot-toast";
 import axios from "axios";
 import { Select } from "antd";
 import { useNavigate, useParams } from "react-router-dom";
