@@ -4,6 +4,10 @@
 </p>
 <p align="center">
   <h1 align="center">StandupIndoMalang</h1>
+  <h3 align="center">MERN Stack Technologies</h3>
+</p>
+<p align="center">
+    <img alt="StandupIndoMalang Logo" src="https://th.bing.com/th/id/OIP.Z6hTDv9NAwKYB5B18BvTFgHaDd?pid=ImgDet&rs=1" align=center />
 </p>
 <p align="center">
   <img src="https://github.com/nodeonline/nodejscart/actions/workflows/build.yml/badge.svg" alt="Github Action">
