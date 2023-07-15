@@ -1,7 +1,7 @@
 {
-  "name": "Ecommerce-app-2023",
+  "name": "MRRN-STACK-app",
   "version": "1.0.0",
-  "description": "ecommerce rest api",
+  "description": "rest api",
   "main": "server.js",
   "type": "module",
   "scripts": {
