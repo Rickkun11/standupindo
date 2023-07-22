@@ -1,8 +1,12 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-useless-escape */
 import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout/Layout";
 import { useParams, useNavigate } from "react-router-dom";
 
 import { useCart } from "../context/cart";
+import { useAuth } from "../context/auth";
 import axios from "axios";
 
 
@@ -12,6 +16,7 @@ const CategoryProduct = () => {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState([]);
+  const [auth, setAuth] = useAuth();
   const [cart, setCart] = useCart();
   let VID_REGEX =
   /(?:youtube(?:-nocookie)?\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
@@ -65,12 +70,19 @@ const CategoryProduct = () => {
                     <button
                     className="btn btn-secondary ms-1"
                     onClick={() => {
-                      setCart([...cart, p]);
-                      localStorage.setItem(
-                        "cart",
-                        JSON.stringify([...cart, p])
-                      );
-                      toast.success("Item Added Favorite");
+
+                      const cartExist = cart.some(obj => obj._id === p._id);
+                      if(!cartExist){
+                        setCart([...cart, p]);
+                        localStorage.setItem(
+                          "cart",
+                          JSON.stringify([...cart, p])
+                        );
+
+                        toast.success("Item Added Favorite");
+                      }else{
+                        toast.error("Item Exist");
+                      }
                     }}
                   >
                     Add Favorite
