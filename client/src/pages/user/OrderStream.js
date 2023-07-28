@@ -9,11 +9,30 @@ import Button from 'react-bootstrap/Button';
 import UserMenu from "../../components/Layout/UserMenu";
 import { useParams } from "react-router-dom";
 import ReactPlayer from 'react-player/lazy'
+
+import axios from "axios";
+
 const OrderStream = () => {
   const [auth, setAuth] = useAuth();
   const params = useParams();
 
+  const [product, setProduct] = useState([]);
   const [cart, setCart] = useCart();
+  //initalp details
+  useEffect(() => {
+    if (params?.slug) getProduct();
+  }, [params?.slug]);
+
+  const getProduct = async () => {
+    try {
+      const { data } = await axios.get(
+        `/api/v1/product/get-product/${params.slug}`
+      );
+      setProduct(data?.product);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <Layout>
       <div className="container-fluid m-3 p-3">
@@ -25,16 +44,14 @@ const OrderStream = () => {
           <div className="col-md-9">
 
       <h3>Now Streaming {params.slug}</h3>
-            {cart?.map((p) => (
 
                 <ReactPlayer
-                url={`/api/v1/product/product-photo/${p.link}`}
+                url={`/api/v1/product/product-photo/${product.link}`}
                 controls={true}
                 width="90%"
                 height="500px"
                 playing={true}
                 />
-            ))}
             <div className='m-2 mt-3 w-10 d-flex gap-2'>
                     <Button variant="dark">👍Like</Button>
                     <Button variant="dark">👎Dislike</Button>
