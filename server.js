@@ -32,13 +32,13 @@ app.get("/", (req, res) => {
   res.send("<h1>Welcome to Standupindo</h1>");
 });
 
-// //PORT
-// const PORT = process.env.PORT || 8080;
+//PORT
+const PORT = process.env.PORT || 8080;
 
-// //run listen
-// app.listen(PORT, () => {
-//   console.log(
-//     `Server Running on ${process.env.DEV_MODE} mode on port ${PORT}`.bgCyan
-//       .white
-//   );
-// });
+//run listen
+app.listen(PORT, () => {
+  console.log(
+    `Server Running on ${process.env.DEV_MODE} mode on port ${PORT}`.bgCyan
+      .white
+  );
+});
