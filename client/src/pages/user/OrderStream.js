@@ -8,7 +8,7 @@ import {CDBInput} from 'cdbreact';
 import Button from 'react-bootstrap/Button';
 import UserMenu from "../../components/Layout/UserMenu";
 import {useParams} from "react-router-dom";
-import ReactPlayer from 'react-player'
+//import ReactPlayer from 'react-player'
 
 import axios from "axios";
 
@@ -54,7 +54,7 @@ const OrderStream = () => {
 
                         <h3>Now Streaming {params.slug}</h3>
 
-                        <ReactPlayer
+                        <video
                             url={`/api/v1/product/product-photo/${product.link}`}
                             controls={true}
                             width="90%"
