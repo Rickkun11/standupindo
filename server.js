@@ -33,10 +33,10 @@ app.get("/", (req, res) => {
 });
 
 
-//run listen
-app.listen(process.env.PORT, () => {
-  console.log(
-    `Server Running on ${process.env.NODE_ENV} mode on port ${PORT}`.bgCyan
-      .white
-  );
-});
+// //run listen
+// app.listen(process.env.PORT, () => {
+//   console.log(
+//     `Server Running on ${process.env.NODE_ENV} mode on port ${PORT}`.bgCyan
+//       .white
+//   );
+// });
