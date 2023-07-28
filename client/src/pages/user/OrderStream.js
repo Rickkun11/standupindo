@@ -8,7 +8,7 @@ import {CDBInput} from 'cdbreact';
 import Button from 'react-bootstrap/Button';
 import UserMenu from "../../components/Layout/UserMenu";
 import {useParams} from "react-router-dom";
-import ReactPlayer from 'react-player/lazy'
+import ReactPlayer from 'react-player'
 
 import axios from "axios";
 

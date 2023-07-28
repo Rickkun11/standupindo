@@ -24,7 +24,6 @@ import {Form,Button,Dropdown,Tabs,Tab,Card} from 'react-bootstrap/';
 
 import { useCart } from "../context/cart";
 import toast from "react-hot-toast";
-import ReactPlayer from 'react-player/youtube'
 
 import banner from '../components/assets/banner.jpg';
 import banner1 from '../components/assets/1.jpg';

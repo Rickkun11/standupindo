@@ -3,7 +3,7 @@ import Layout from "./../components/Layout/Layout";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 
-import ReactPlayer from 'react-player/lazy'
+import ReactPlayer from 'react-player'
 const ProductDetails = () => {
   const params = useParams();
   const navigate = useNavigate();
