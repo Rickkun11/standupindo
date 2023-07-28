@@ -32,11 +32,9 @@ app.get("/", (req, res) => {
   res.send("<h1>Welcome to Standupindo</h1>");
 });
 
-//PORT
-const PORT = process.env.PORT || 8080;
 
 //run listen
-app.listen(PORT, () => {
+app.listen(process.env.PORT, () => {
   console.log(
     `Server Running on ${process.env.NODE_ENV} mode on port ${PORT}`.bgCyan
       .white
