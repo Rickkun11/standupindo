@@ -4,6 +4,9 @@
   "description": "rest api",
   "main": "server.js",
   "type": "module",
+  "engines": {
+    "node": "18.16.0"
+  },
   "scripts": {
     "start": "node server.js",
     "server": "node server.js",
