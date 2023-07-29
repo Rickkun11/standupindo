@@ -33,7 +33,7 @@ const OrderStream = () => {
 
     const getProduct = async () => {
         try {
-            const {data} = await axios.get(`/api/v1/product/get-product/${params.slug}`);
+            const {data} = await axios.get(`https://standupindo.vercel.app/api/v1/product/get-product/${params.slug}`);
             setProduct(
                 data
                     ?.product

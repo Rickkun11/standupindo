@@ -25,7 +25,7 @@ const Orders = () => {
   const getSingleProduct = async () => {
     try {
       await axios.get(
-        `/api/v1/product/get-product/${params.slug}`
+        `https://standupindo.vercel.app/api/v1/product/get-product/${params.slug}`
       );
     } catch (error) {
       console.log(error);
