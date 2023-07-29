@@ -3,7 +3,7 @@ import Layout from "./../components/Layout/Layout";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 
-//import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player'
 const ProductDetails = () => {
   const params = useParams();
   const navigate = useNavigate();
@@ -43,8 +43,8 @@ const ProductDetails = () => {
     <Layout>
        <div className="row container mt-2">
         <div className="col-md-6">
-        <video
-                url={`/api/v1/product/product-photo/${product.link}`}
+        <ReactPlayer
+                url={`https://standupindo.vercel.app/api/v1/product/product-photo/${product.link}`}
                 controls={false}
                 height="300px"
                 playing={false}
