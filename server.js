@@ -28,7 +28,7 @@ app.use("/api/v1/category", categoryRoutes);
 app.use("/api/v1/product", productRoutes);
 
 //rest api
-app.post("/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("<h1>Welcome to Standupindo</h1>");
 });
 
