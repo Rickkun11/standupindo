@@ -29,7 +29,7 @@ app.use("/api/v1/product", productRoutes);
 
 //rest api
 app.get("/", (req, res) => {
-  res.send("<h1>Welcome to Standupindo</h1>");
+  res.json("<h1>Welcome to Standupindo</h1>");
 });
 
 var PORT = process.env.PORT || 8080;
