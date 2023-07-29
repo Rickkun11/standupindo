@@ -7,6 +7,7 @@ import authRoutes from "./routes/authRoute.js";
 import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import cors from "cors";
+import ServerlessHttp from "serverless-http";
 
 //configure env
 dotenv.config();
@@ -33,10 +34,11 @@ app.get("/", (req, res) => {
 });
 
 
-//run listen
-app.listen(process.env.PORT, () => {
-  console.log(
-    `Server Running on ${process.env.NODE_ENV} mode on port ${PORT}`.bgCyan
-      .white
-  );
-});
+// //run listen
+// app.listen(process.env.PORT, () => {
+//   console.log(
+//     `Server Running on ${process.env.NODE_ENV} mode on port ${PORT}`.bgCyan
+//       .white
+//   );
+// });
+module.exports.handler = ServerlessHttp(app)
