@@ -15,7 +15,7 @@ const CreateCategory = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("/api/v1/category/create-category", {
+      const { data } = await axios.post("https://standupindo.vercel.app/api/v1/category/create-category", {
         name,
       });
       if (data?.success) {
