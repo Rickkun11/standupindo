@@ -81,6 +81,11 @@ const Register = () => {
               type="text"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
+              onKeyPress={(event) => {
+                if (!/[0-9]/.test(event.key)) {
+                event.preventDefault();
+                }
+                }}
               className="form-control"
               id="exampleInputEmail1"
               placeholder="Enter Your Phone"
