@@ -5,7 +5,7 @@ const Footer = () => {
     <MDBFooter className='footer text-center text-white m-0' style={{ backgroundColor: '#212529' }}>
 
       <div className='text-center p-3' style={{ backgroundColor: '#212529' }}>
-        © 2020 Copyright :
+        © 2023 Copyright :
         <a className='text-white' href='/'>
         StandupIndoMalang
         </a>

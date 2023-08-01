@@ -1,3 +1,5 @@
+/* eslint-disable no-useless-escape */
+/* eslint-disable no-unused-vars */
 import React, {useEffect } from "react";
 
 import Layout from "../../components/Layout/Layout";

@@ -2,15 +2,17 @@ import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import { useAuth } from "../../context/auth";
 import toast from "react-hot-toast";
-import SearchInput from "../Form/SearchInput";
 import useCategory from "../../hooks/useCategory";
 import { useCart } from "../../context/cart";
 import { Badge } from "antd";
+
+import { useParams } from "react-router-dom";
 import logo from '../assets/logo.png';
 const Header = () => {
   const [auth, setAuth] = useAuth();
   const [cart] = useCart();
   const categories = useCategory();
+  const params = useParams();
   const handleLogout = () => {
     setAuth({
       ...auth,
@@ -43,12 +45,12 @@ const Header = () => {
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
 
-              <li className="nav-item">
+              <li className="nav-item" key={params.key}>
                 <NavLink to="/" className="nav-link text-white">
                   Home
                 </NavLink>
               </li>
-              <li className="nav-item dropdown">
+              <li className="nav-item dropdown" key={params.key}>
                 <Link
                   className="nav-link dropdown-toggle text-white"
                   to={"/categories"}
@@ -57,13 +59,13 @@ const Header = () => {
                   Categories
                 </Link>
                 <ul className="dropdown-menu">
-                  <li>
+                  <li key={params.key}>
                     <Link className="dropdown-item" to={"/categories"}>
                       All Categories
                     </Link>
                   </li>
                   {categories?.map((c) => (
-                    <li>
+                    <li key={c._id}>
                       <Link
                         className="dropdown-item "
                         to={`/category/${c.slug}`}
@@ -77,12 +79,12 @@ const Header = () => {
 
               {!auth?.user ? (
                 <>
-                  <li className="nav-item text-white">
+                  <li className="nav-item text-white" key={params.key}>
                     <NavLink to="/register" className="nav-link text-white">
                       Register
                     </NavLink>
                   </li>
-                  <li className="nav-item text-white">
+                  <li className="nav-item text-white" key={params.key}>
                     <NavLink to="/login" className="nav-link text-white">
                       Login
                     </NavLink>
@@ -90,7 +92,7 @@ const Header = () => {
                 </>
               ) : (
                 <>
-                  <li className="nav-item dropdown">
+                  <li className="nav-item dropdown" key={params.key}>
                     <NavLink
                       className="nav-link dropdown-toggle text-white"
                       href="#"
@@ -101,7 +103,7 @@ const Header = () => {
                       {auth?.user?.name}
                     </NavLink>
                     <ul className="dropdown-menu ">
-                      <li>
+                      <li key={params.key}>
                         <NavLink
                           to={`/dashboard/${
                             auth?.user?.role === 1 ? "admin" : "user"
@@ -111,7 +113,7 @@ const Header = () => {
                           Dashboard
                         </NavLink>
                       </li>
-                      <li>
+                      <li key={params.key}>
                         <NavLink
                           onClick={handleLogout}
                           to="/login"
@@ -124,7 +126,7 @@ const Header = () => {
                   </li>
                 </>
               )}
-              <li className="nav-item m-1 text-white">
+              <li className="nav-item m-1 text-white" key={params.key}>
                 <Badge count={cart?.length} showZero>
                   <NavLink to="/cart" className="nav-link text-white">
                     Favorite

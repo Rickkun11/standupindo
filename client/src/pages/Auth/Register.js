@@ -39,7 +39,7 @@ const Register = () => {
 
   return (
     <Layout title="StandupIndo - Register">
-      <div className="form-container ">
+      <div className="form-container m-5">
         <form onSubmit={handleSubmit}>
           <h4 className="title">REGISTER FORM</h4>
           <div className="mb-3">
