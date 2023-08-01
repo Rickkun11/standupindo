@@ -133,12 +133,13 @@
   /* For mobile Tablet: */
 #review-card-layout{
   display: none;
-}
+  }
+
 }
 
 @media only screen and (max-width: 350px) {
   /* For mobile Tablet: */
 #uncontrolled-tab-example{
   display: none;
-}
+  }
 }
