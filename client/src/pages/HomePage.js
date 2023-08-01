@@ -88,7 +88,7 @@ const HomePage = () => {
                 </MDBTabsItem>
             </MDBTabs>
 
-            <MDBTabsContent>
+            <MDBTabsContent className='mb-3'>
                 <MDBTabsPane show={basicActive === 'tab1'}>
 
                     <div className='card-row d-flex gap-3'>
@@ -113,7 +113,7 @@ const HomePage = () => {
                                 </MDBCarouselItem>
                             </MDBCarousel>
 
-                        <div className="flex-fill flex-shrink-1">
+                        <div className="booknow flex-fill flex-shrink-1">
                             <MDBCard className='h-100'>
                                 <div className="card-header">Book Now</div>
                                 <Dropdown className="m-2 mb-0">
@@ -164,8 +164,8 @@ const HomePage = () => {
                             </MDBCard>
                         </div>
 
-                        <div className='d-flex' style={{width:"40%"}} id="featured">
-                            <MDBCard className='h-100'>
+                        <div className=''  id="featured">
+                            <MDBCard className='h-100' id="featured-card">
                                 <MDBCardHeader>Featured</MDBCardHeader>
                                 <MDBCardBody>
                                     <Tabs
