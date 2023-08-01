@@ -4,7 +4,6 @@ import React, {useState, useEffect} from "react";
 import Layout from "./../components/Layout/Layout";
 
 import {useNavigate} from "react-router-dom";
-import axios from "axios";
 import {
     MDBTabs,
     MDBTabsItem,

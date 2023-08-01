@@ -165,7 +165,7 @@ export const testController = (req, res) => {
 //update prfole
 export const updateProfileController = async (req, res) => {
   try {
-    const { name, email, password, address, phone } = req.body;
+    const { name, password, address, phone } = req.body;
     const user = await userModel.findById(req.user._id);
     //password
     if (password && password.length < 6) {
@@ -177,6 +177,7 @@ export const updateProfileController = async (req, res) => {
       {
         name: name || user.name,
         password: hashedPassword || user.password,
+        email: email || user.email,
         phone: phone || user.phone,
         address: address || user.address,
       },

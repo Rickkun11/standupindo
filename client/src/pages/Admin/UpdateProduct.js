@@ -40,7 +40,7 @@ const UpdateProduct = () => {
   //get all category
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("/api/v1/category/get-category");
+      const { data } = await axios.get("https://standupindo.vercel.app/api/v1/category/get-category");
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -64,7 +64,7 @@ const UpdateProduct = () => {
       productData.append("link", link);
       productData.append("category", category);
       const { data } = axios.put(
-        `/api/v1/product/update-product/${id}`,
+        `https://standupindo.vercel.app/api/v1/product/update-product/${id}`,
         productData
       );
       if (data?.success) {
@@ -85,7 +85,7 @@ const UpdateProduct = () => {
       let answer = window.prompt("Are You Sure want to delete this product ? ");
       if (!answer) return;
       const { data } = await axios.delete(
-        `/api/v1/product/delete-product/${id}`
+        `https://standupindo.vercel.app/api/v1/product/delete-product/${id}`
       );
       toast.success("Product DEleted Succfully");
       navigate("/dashboard/admin/products");

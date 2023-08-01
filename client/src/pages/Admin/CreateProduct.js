@@ -42,7 +42,7 @@ const CreateProduct = () => {
       productData.append("link", link);
       productData.append("category", category);
       const { data } = axios.post(
-        "/api/v1/product/create-product",
+        "https://standupindo.vercel.app/api/v1/product/create-product",
         productData
       );
       if (data?.success) {
